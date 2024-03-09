@@ -1,9 +1,12 @@
 
-import { SignedOut } from '@clerk/nextjs/app-beta'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+
+import { SignedOut, SignedIn, UserButton } from '@clerk/nextjs/app-beta'
 import { Button } from '../ui/button'
+import NavItems from './NavItems'
+import MobileNav from './MobileNav'
 
 const Header = () => {
    return (
@@ -21,8 +24,18 @@ const Header = () => {
                />
                <h3 className='text-2xl font-bold text-[#FF00FF]'>Marzkyy</h3>
             </Link>
+            
+            <SignedIn>
+               <nav className='hidden md:flex-between w-full max-w-xs'>
+                  <NavItems />
+               </nav>
+            </SignedIn>
 
             <div className="flex justify-end w-32 ">
+               <SignedIn >
+                     <UserButton afterSignOutUrl="/" />
+                     <MobileNav />
+               </SignedIn>
                <SignedOut>
                   <Button className='rounded-full' size={'lg'}>
                      <Link href={'/sign-in'}>
@@ -35,5 +48,5 @@ const Header = () => {
       </header>
    )
 }
-
+   
 export default Header
