@@ -16,7 +16,7 @@ const UserSchema = new Schema({
       require: [true, 'User Name must be filled in!'],
       unique: true
    },
-   fristName: {
+   firstName: {
       type: String,
       required: [true, 'Frist Name must be filled in!']
    },
