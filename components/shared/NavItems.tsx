@@ -9,12 +9,12 @@ const NavItems = () => {
    const pathName = usePathname()
    return (
       <ul className='w-full flex flex-col gap-5 items-start md:flex-row'>
-         {menuLink.map((item, i) => {
+         {menuLink.map((item) => {
             const isActive = pathName === item.path
             return (
                <li className={`${isActive && 'text-primary-500'} flex-center p-medium-16 whitespace-nowrap`}>
                   <Link
-                     key={i}
+                     key={item.path}
                      href={`${item.path}`}
                   >
                      {item.title}
