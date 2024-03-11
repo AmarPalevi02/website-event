@@ -10,7 +10,7 @@ export const conectToMongoose = async() => {
    if(!MONGODB_URL) throw new Error('MONGODB_URL is missing')
 
    cachd.promise = cachd.promise || mongoose.connect(MONGODB_URL, {
-      dbName: 'evently',
+      dbName: 'db_evently',
       bufferCommands: false
    })
 

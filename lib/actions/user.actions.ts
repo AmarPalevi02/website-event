@@ -12,7 +12,7 @@ export const createUser = async (user: CreateUserParams) => {
 
       const newUser = await User.create(user)
       return JSON.parse(JSON.stringify(newUser))
-      
+
    } catch (error) {
       handleError(error)
    }
@@ -20,8 +20,9 @@ export const createUser = async (user: CreateUserParams) => {
 
 export const updateUser = async (clerkId: string, user: UpdateUserParams) => {
    try {
+      await conectToMongoose()
 
    } catch (error) {
-
+      handleError(error)
    }
 }
