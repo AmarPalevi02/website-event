@@ -14,5 +14,7 @@ export const conectToMongoose = async() => {
       bufferCommands: false
    })
 
-   
+   cachd.conn = await cachd.promise
+
+   return cachd.conn
 }
