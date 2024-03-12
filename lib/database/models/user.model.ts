@@ -8,21 +8,21 @@ const UserSchema = new Schema({
    },
    email: {
       type: String,
-      required: [true, 'Email must be filled in!'],
+      required: true,
       unique: true,
    },
    username: {
       type: String,
-      require: [true, 'User Name must be filled in!'],
+      require: true,
       unique: true
    },
    firstName: {
       type: String,
-      required: [true, 'Frist Name must be filled in!']
+      required: true
    },
-   lastNmae: {
+   lastName: {
       type: String,
-      required: [true, 'Last Name must be filled in!']
+      required: true
    },
    photo: {
       type: String,

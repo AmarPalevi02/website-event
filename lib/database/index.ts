@@ -13,6 +13,7 @@ export const conectToMongoose = async() => {
       dbName: 'db_evently',
       bufferCommands: false
    })
+   
 
    cachd.conn = await cachd.promise
 

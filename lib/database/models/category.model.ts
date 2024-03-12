@@ -8,7 +8,7 @@ export interface ICategory extends Document {
 const CategorySchema = new Schema({
    name: {
       type: String,
-      required: [true, 'Name Category must be filled in!']
+      required: true,
    }
 })
 

@@ -19,11 +19,11 @@ export interface IEvent extends Document {
 const EventSchema = new Schema({
    title: {
       type: String,
-      required: [true, 'Title must be filled in!']
+      required: true,
    },
    description: {
       type: String,
-      required: [true, 'Description must be filled in!']
+      required: true,
    },
    location: {
       type: String
@@ -34,7 +34,7 @@ const EventSchema = new Schema({
    },
    imageUrl: {
       type: String,
-      required: [true, 'Image URL must be filled in!']
+      required: true,
    },
    startDateTime: {
       type: Date,
